@@ -3,7 +3,7 @@
 import AnimatedLogo from './AnimatedLogo';
 
 const footerLinks = {
-  Solutions: ['AI Solutions', 'Software Development', 'App Solutions', 'Platform Engineering', 'Blockchain', 'Data Governance'],
+  Solutions: ['AI', 'SE', 'App sol', 'Product desi', 'Product managt', 'Platform eng', 'System int', 'Poc sistem'],
   Company: ['About Us', 'Our Work', 'Careers', 'Blog', 'Contact'],
   Connect: ['LinkedIn', 'GitHub', 'Twitter / X', 'Instagram'],
 };
@@ -49,7 +49,7 @@ export default function Footer() {
                 letterSpacing: '0.08em',
                 color: '#F5F5F7',
               }}>
-                CEYRA<span className="gradient-text">LABS</span>
+                CEYRA <span className="gradient-text">LABS</span>
               </span>
             </div>
             <p style={{
@@ -161,7 +161,7 @@ export default function Footer() {
             margin: 0,
             fontFamily: "'Inter', Arial, sans-serif",
           }}>
-            © {new Date().getFullYear()} CeyraLabs. All rights reserved.
+            © {new Date().getFullYear()} CEYRA LABS. All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: 24 }}>
             {['Privacy Policy', 'Terms of Service'].map((label) => (

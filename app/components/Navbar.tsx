@@ -47,7 +47,7 @@ export default function Navbar() {
             letterSpacing: '0.08em',
             color: '#F5F5F7',
           }}>
-            CEYRA<span className="gradient-text">LABS</span>
+            CEYRA <span className="gradient-text">LABS</span>
           </span>
         </a>
 

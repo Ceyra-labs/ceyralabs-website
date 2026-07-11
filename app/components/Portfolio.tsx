@@ -4,58 +4,53 @@ import { useEffect, useRef } from 'react';
 
 const projects = [
   {
-    id: 'nexus-ai',
-    category: 'AI Platform',
-    title: 'Nexus Intelligence Platform',
-    description: 'Enterprise AI orchestration platform processing 2M+ daily events with real-time decision intelligence.',
-    tags: ['Python', 'TensorFlow', 'Kubernetes', 'React'],
+    id: 'pulse-feed',
+    category: 'Social App',
+    title: 'PulseFeed Engine',
+    description: 'A real-time content aggregation and engagement engine with automated feed updates and social analytics.',
+    tags: ['Next.js', 'Tailwind CSS', 'Socket.io', 'Redis'],
     accent: '#FF6B00',
     gradient: 'linear-gradient(135deg, rgba(255,107,0,0.15) 0%, rgba(255,60,0,0.05) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <circle cx="16" cy="16" r="14" stroke="rgba(255,107,0,0.3)" strokeWidth="1"/>
-        <path d="M16 8v8l5 3" stroke="#FF6B00" strokeWidth="2" strokeLinecap="round"/>
-        <circle cx="16" cy="16" r="3" fill="#FF6B00" opacity="0.6"/>
-        <circle cx="8" cy="12" r="2" fill="rgba(255,107,0,0.4)"/>
-        <circle cx="24" cy="12" r="2" fill="rgba(255,107,0,0.4)"/>
-        <circle cx="24" cy="22" r="2" fill="rgba(255,107,0,0.4)"/>
-        <path d="M10 12l4 4M22 12l-4 4M22 22l-4-2" stroke="rgba(255,107,0,0.3)" strokeWidth="1"/>
+        <path d="M10 16h12M16 10l6 6-6 6" stroke="#FF6B00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="16" cy="16" r="2" fill="#FF6B00"/>
       </svg>
     ),
-    result: '340% efficiency gain',
+    result: '14M+ monthly impressions',
   },
   {
-    id: 'chain-ledger',
-    category: 'Blockchain',
-    title: 'ChainLedger DeFi Protocol',
-    description: 'Decentralized finance protocol managing $50M+ TVL with audit-grade smart contract security.',
-    tags: ['Solidity', 'React', 'Node.js', 'Web3'],
+    id: 'bioflow-creator',
+    category: 'Web Platform',
+    title: 'BioFlow Creator Hub',
+    description: 'A customizable link-in-bio platform for creators to centralize social profiles, track audience clicks, and host micro-blogs.',
+    tags: ['TypeScript', 'Next.js', 'Prisma', 'Tailwind'],
     accent: '#7C5CFC',
     gradient: 'linear-gradient(135deg, rgba(124,92,252,0.15) 0%, rgba(90,60,220,0.05) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path d="M16 4L4 10v12l12 6 12-6V10L16 4z" stroke="#7C5CFC" strokeWidth="1.5" strokeLinejoin="round"/>
-        <path d="M4 10l12 6 12-6M16 16v12" stroke="#7C5CFC" strokeWidth="1.5" strokeLinecap="round"/>
+        <rect x="6" y="6" width="20" height="20" rx="4" stroke="#7C5CFC" strokeWidth="1.5"/>
+        <path d="M11 12h10M11 16h10M11 20h6" stroke="#7C5CFC" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    result: '$50M+ TVL secured',
+    result: '300K+ creators active',
   },
   {
-    id: 'pulse-health',
-    category: 'Mobile App',
-    title: 'Pulse Health Suite',
-    description: 'HIPAA-compliant telemedicine platform serving 100K+ patients with real-time diagnostic tools.',
-    tags: ['React Native', 'TypeScript', 'AWS', 'PostgreSQL'],
+    id: 'vibespace-community',
+    category: 'Community Web',
+    title: 'VibeSpace Portal',
+    description: 'A dynamic, browser-based discussion forum featuring live chat rooms, thread-based updates, and profile customizers.',
+    tags: ['React', 'Node.js', 'WebRTC', 'MongoDB'],
     accent: '#22D3EE',
     gradient: 'linear-gradient(135deg, rgba(34,211,238,0.12) 0%, rgba(6,182,212,0.04) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <rect x="8" y="4" width="16" height="24" rx="3" stroke="#22D3EE" strokeWidth="1.5"/>
-        <path d="M12 14h3l2-4 2 8 2-4h1" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <circle cx="16" cy="22" r="1.5" fill="#22D3EE" opacity="0.6"/>
+        <path d="M8 10h16M8 15h16M8 20h10" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round"/>
+        <rect x="6" y="6" width="20" height="20" rx="3" stroke="#22D3EE" strokeWidth="1.5"/>
       </svg>
     ),
-    result: '100K+ active patients',
+    result: '85% higher retention rate',
   },
 ];
 
@@ -225,7 +220,7 @@ export default function Portfolio() {
               marginBottom: 14,
               textTransform: 'uppercase',
             }}>
-              Featured Work
+              Our Projects
             </div>
             <h2 style={{
               fontFamily: "'Space Grotesk', Arial, sans-serif",

@@ -9,7 +9,7 @@ const services = [
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: 'AI Solutions',
+    title: 'AI',
     description: 'Machine learning systems, LLM integrations, computer vision, and intelligent automation pipelines.',
     accent: '#FF6B00',
   },
@@ -20,7 +20,7 @@ const services = [
         <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'Software Development',
+    title: 'SE',
     description: 'Full-stack engineering with scalable architecture, clean code principles, and enterprise reliability.',
     accent: '#7C5CFC',
   },
@@ -32,7 +32,7 @@ const services = [
         <circle cx="12" cy="18" r="1" fill="currentColor"/>
       </svg>
     ),
-    title: 'App Solutions',
+    title: 'App sol',
     description: 'Cross-platform mobile applications for iOS and Android built with performance-first principles.',
     accent: '#22D3EE',
   },
@@ -42,7 +42,7 @@ const services = [
         <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: 'Product Design & Usability',
+    title: 'Product desi',
     description: 'User-centric UI/UX design with research-driven decisions and refined design systems.',
     accent: '#FF6B00',
   },
@@ -52,7 +52,7 @@ const services = [
         <path d="M9 17H7A5 5 0 017 7h2M15 7h2a5 5 0 010 10h-2M8 12h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: 'Product Management',
+    title: 'Product managt',
     description: 'Strategic product lifecycle management from ideation to launch with agile execution.',
     accent: '#7C5CFC',
   },
@@ -64,7 +64,7 @@ const services = [
         <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
       </svg>
     ),
-    title: 'Platform Engineering',
+    title: 'Platform eng',
     description: 'Cloud infrastructure, DevOps pipelines, microservices, and highly available distributed systems.',
     accent: '#22D3EE',
   },
@@ -76,8 +76,8 @@ const services = [
         <path d="M2 17l10 5 10-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'Blockchain Technology',
-    description: 'Smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain integrations.',
+    title: 'System int',
+    description: 'System-level architecture, integration layers, and reliability-focused implementation.',
     accent: '#FF6B00',
   },
   {
@@ -88,19 +88,9 @@ const services = [
         <path d="M3 12a9 3 0 0018 0" stroke="currentColor" strokeWidth="1.5"/>
       </svg>
     ),
-    title: 'Data Governance',
-    description: 'Data strategy, pipeline architecture, analytics platforms, and compliance frameworks.',
-    accent: '#7C5CFC',
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    ),
-    title: 'POC Solutions',
+    title: 'Poc sistem',
     description: 'Rapid proof-of-concept builds to validate ideas, secure investment, and reduce technical risk.',
-    accent: '#22D3EE',
+    accent: '#7C5CFC',
   },
   {
     icon: (
@@ -110,9 +100,9 @@ const services = [
         <path d="M20 21l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'System Integration',
-    description: 'Seamless API integrations, legacy modernization, and third-party system connectivity.',
-    accent: '#FF6B00',
+    title: 'AI',
+    description: 'AI-assisted product delivery, automation, and decision support systems for modern teams.',
+    accent: '#22D3EE',
   },
 ];
 
@@ -226,7 +216,7 @@ export default function Services() {
             lineHeight: 1.15,
           }}>
             Solutions That Drive{' '}
-            <span className="gradient-text-brand">Real Results</span>
+            <span className="gradient-text">Real Results</span>
           </h2>
           <p style={{
             fontSize: 17,

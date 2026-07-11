@@ -3,15 +3,15 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Projects Delivered', description: 'Across web, mobile, AI, and enterprise' },
+  { value: 1, suffix: '', label: 'Why Us', description: 'Strategy-led delivery with a practical product mindset' },
   { value: 30, suffix: '+', label: 'Global Clients', description: 'From startups to Fortune 500 companies' },
   { value: 5, suffix: '+', label: 'Years of Excellence', description: 'Building software since 2019' },
   { value: 15, suffix: '+', label: 'Technologies Mastered', description: 'Full-stack expertise across the board' },
 ];
 
 const techStack = [
-  'React', 'TypeScript', 'Node.js', 'Python', 'Go', 'Kubernetes',
-  'AWS', 'PostgreSQL', 'MongoDB', 'Solidity', 'TensorFlow', 'Next.js',
+  'React', 'TypeScript', 'Node.js', 'Python', 'Go', 'MongoDB',
+  'AWS', 'Azure', 'Vercel', 'WordPress', 'Figma', 'Next.js',
 ];
 
 function AnimatedCounter({ target, suffix, duration = 1800 }: { target: number; suffix: string; duration?: number }) {
@@ -118,19 +118,35 @@ export default function Stats() {
                 transitionDelay: `${i * 0.12}s`,
               }}
             >
-              <div style={{
-                fontFamily: "'Space Grotesk', Arial, sans-serif",
-                fontSize: 'clamp(40px, 4vw, 56px)',
-                fontWeight: 700,
-                background: 'linear-gradient(135deg, #FF6B00, #FFB74D)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                lineHeight: 1,
-                marginBottom: 8,
-              }}>
-                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-              </div>
+              {stat.label === 'Why Us' ? (
+                <div style={{
+                  fontFamily: "'Space Grotesk', Arial, sans-serif",
+                  fontSize: 'clamp(34px, 3.5vw, 48px)',
+                  fontWeight: 700,
+                  background: 'linear-gradient(135deg, #FF6B00, #FFB74D)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  lineHeight: 1,
+                  marginBottom: 8,
+                }}>
+                  Why Us
+                </div>
+              ) : (
+                <div style={{
+                  fontFamily: "'Space Grotesk', Arial, sans-serif",
+                  fontSize: 'clamp(40px, 4vw, 56px)',
+                  fontWeight: 700,
+                  background: 'linear-gradient(135deg, #FF6B00, #FFB74D)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  lineHeight: 1,
+                  marginBottom: 8,
+                }}>
+                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                </div>
+              )}
               <div style={{
                 fontFamily: "'Space Grotesk', Arial, sans-serif",
                 fontSize: 16,

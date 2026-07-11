@@ -428,7 +428,7 @@ function CardClients({ index }: { index: number }) {
           {count}<span style={{ color: '#22D3EE' }}>+</span>
         </div>
         <CardLabel color="#22D3EE">Global Clients</CardLabel>
-        <CardBody>Companies in 15+ countries trust CEYRALABS to build their products.</CardBody>
+        <CardBody>Companies in 15+ countries trust CEYRA LABS to build their products.</CardBody>
       </div>
     </BentoCard>
   );
@@ -485,22 +485,20 @@ function CardSpeed({ index }: { index: number }) {
     </BentoCard>
   );
 }
-
 /* ── Card E — Tech stack (2 cols × 1 row) ──────────────────────────────── */
-const techChips = [
-  { label: 'React', color: 'rgba(97,218,251,0.12)', text: '#61DAFB' },
-  { label: 'Next.js', color: 'rgba(255,255,255,0.07)', text: '#E5E7EB' },
-  { label: 'Python', color: 'rgba(255,214,98,0.1)', text: '#FFD662' },
-  { label: 'Node.js', color: 'rgba(104,178,84,0.12)', text: '#68B254' },
-  { label: 'Rust', color: 'rgba(255,130,70,0.12)', text: '#FF8246' },
-  { label: 'Solidity', color: 'rgba(124,92,252,0.12)', text: '#A78BFA' },
-  { label: 'Swift', color: 'rgba(255,80,50,0.12)', text: '#FF6347' },
-  { label: 'Kubernetes', color: 'rgba(50,149,233,0.12)', text: '#3295E9' },
-  { label: 'GraphQL', color: 'rgba(225,0,152,0.1)', text: '#E10098' },
-  { label: 'PostgreSQL', color: 'rgba(51,103,145,0.15)', text: '#336791' },
-  { label: 'TensorFlow', color: 'rgba(255,160,0,0.1)', text: '#FFA000' },
-  { label: 'AWS', color: 'rgba(255,153,0,0.1)', text: '#FF9900' },
-];
+  const techChips = [
+    { label: 'React', color: 'rgba(97,218,251,0.12)', text: '#61DAFB' },
+    { label: 'Next.js', color: 'rgba(255,255,255,0.07)', text: '#E5E7EB' },
+    { label: 'Python', color: 'rgba(255,214,98,0.1)', text: '#FFD662' },
+    { label: 'Node.js', color: 'rgba(104,178,84,0.12)', text: '#68B254' },
+    { label: 'Wordpress', color: 'rgba(255,130,70,0.12)', text: '#FF8246' },
+    { label: 'Mongodb', color: 'rgba(74,182,74,0.12)', text: '#4AB64A' },
+    { label: 'Azure', color: 'rgba(0,120,215,0.12)', text: '#0078D4' },
+    { label: 'Vercel', color: 'rgba(255,255,255,0.12)', text: '#FFFFFF' },
+    { label: 'Figma', color: 'rgba(235,87,87,0.12)', text: '#EB5757' },
+    { label: 'PostgreSQL', color: 'rgba(51,103,145,0.15)', text: '#336791' },
+    { label: 'AWS', color: 'rgba(255,153,0,0.1)', text: '#FF9900' },
+  ];
 
 function CardTechStack({ index }: { index: number }) {
   return (

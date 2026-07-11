@@ -257,12 +257,16 @@ export default function Cta() {
                   onBlur={(e) => { (e.target as HTMLSelectElement).style.borderColor = '#2A2A35'; }}
                 >
                   <option value="">Select a service...</option>
-                  <option>AI Solutions</option>
-                  <option>Software Development</option>
-                  <option>App Solutions</option>
-                  <option>Platform Engineering</option>
-                  <option>Blockchain Technology</option>
-                  <option>Other</option>
+<option>Software Engineering</option>
+<option>App Solutions</option>
+<option>Product Design</option>
+<option>Product Management</option>
+<option>Platform Engineering</option>
+<option>System Integration</option>
+<option>Proof of Concept (PoC) Systems</option>
+<option>Artificial Intelligence (AI)</option>
+<option>Custom WordPress Development</option>
+<option>Other</option>
                 </select>
               </div>
               <div>

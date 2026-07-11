@@ -3,8 +3,8 @@ import { PorscheDesignSystemProvider } from '@porsche-design-system/components-r
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'CeyraLabs — Next-Gen Technology Lab',
-  description: 'CeyraLabs builds intelligent, scalable, future-ready software — AI, mobile apps, platform engineering, blockchain, and more.',
+  title: 'CEYRA LABS — Next-Gen Technology Lab',
+  description: 'CEYRA LABS builds intelligent, scalable, future-ready software — AI, mobile apps, platform engineering, blockchain, and more.',
 };
 
 export const viewport: Viewport = {

@@ -2,7 +2,7 @@
 
 ## ✅ Conversion Complete
 
-Your CeyraLabs portfolio has been successfully converted from Vite + React to Next.js 15. The migration maintains 100% feature parity with the original design.
+Your CEYRA LABS portfolio has been successfully converted from Vite + React to Next.js 15. The migration maintains 100% feature parity with the original design.
 
 ---
 

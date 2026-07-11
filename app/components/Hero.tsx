@@ -24,24 +24,24 @@ export default function Hero() {
         charIndex.current++;
         if (charIndex.current === word.length) {
           deleting.current = true;
-          timeout = setTimeout(type, 2200);
+          timeout = setTimeout(type, 1400);
           return;
         }
-        timeout = setTimeout(type, 80);
+        timeout = setTimeout(type, 65);
       } else {
         el.textContent = word.slice(0, charIndex.current - 1);
         charIndex.current--;
         if (charIndex.current === 0) {
           deleting.current = false;
           wordIndex.current = (wordIndex.current + 1) % words.length;
-          timeout = setTimeout(type, 300);
+          timeout = setTimeout(type, 220);
           return;
         }
-        timeout = setTimeout(type, 45);
+        timeout = setTimeout(type, 35);
       }
     };
 
-    timeout = setTimeout(type, 1200);
+    timeout = setTimeout(type, 900);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -149,7 +149,7 @@ export default function Hero() {
           }}>
             Build{' '}
             <span className="gradient-text" style={{ display: 'inline-block', minWidth: 220 }}>
-              <span ref={wordRef}>Intelligent</span>
+              <span ref={wordRef} style={{ display: 'inline-block', minWidth: 170, textAlign: 'left' }}>Intelligent</span>
               <span style={{
                 display: 'inline-block',
                 width: 2,
@@ -250,7 +250,6 @@ export default function Hero() {
             animation: 'fade-in-up 0.6s ease 0.8s both',
           }}>
             {[
-              { value: '50+', label: 'Projects Delivered' },
               { value: '30+', label: 'Global Clients' },
               { value: '5+', label: 'Years Active' },
             ].map(({ value, label }) => (
