@@ -6,104 +6,105 @@ const services = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3M3 16v3a2 2 0 002 2h3m8 0h3a2 2 0 002-2v-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
-    title: 'AI',
-    description: 'Machine learning systems, LLM integrations, computer vision, and intelligent automation pipelines.',
-    accent: '#FF6B00',
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3M3 16v3a2 2 0 002 2h3m8 0h3a2 2 0 002-2v-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
-    title: 'SE',
+    title: 'Software Development',
     description: 'Full-stack engineering with scalable architecture, clean code principles, and enterprise reliability.',
     accent: '#7C5CFC',
   },
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M9 7h6M9 11h6M9 15h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="12" cy="18" r="1" fill="currentColor"/>
+        <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M9 7h6M9 11h6M9 15h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="12" cy="18" r="1" fill="currentColor" />
       </svg>
     ),
-    title: 'App sol',
+    title: 'Mobile Applications',
     description: 'Cross-platform mobile applications for iOS and Android built with performance-first principles.',
     accent: '#22D3EE',
   },
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'Product desi',
+    title: 'UI/UX Design',
     description: 'User-centric UI/UX design with research-driven decisions and refined design systems.',
     accent: '#FF6B00',
   },
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M9 17H7A5 5 0 017 7h2M15 7h2a5 5 0 010 10h-2M8 12h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'Product managt',
+    title: 'Artificial Intelligence',
+    description: 'Machine learning systems, LLM integrations, computer vision, and intelligent automation pipelines.',
+    accent: '#09ff00ff',
+  },
+
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M9 17H7A5 5 0 017 7h2M15 7h2a5 5 0 010 10h-2M8 12h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: 'Product Management',
     description: 'Strategic product lifecycle management from ideation to launch with agile execution.',
     accent: '#7C5CFC',
   },
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M16 3v4M8 3v4M16 17v4M8 17v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M16 3v4M8 3v4M16 17v4M8 17v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),
-    title: 'Platform eng',
+    title: 'Platform Engineering',
     description: 'Cloud infrastructure, DevOps pipelines, microservices, and highly available distributed systems.',
     accent: '#22D3EE',
   },
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-        <path d="M2 12l10 5 10-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M2 17l10 5 10-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M4 6h16M4 12h16M4 18h7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="17" cy="18" r="3" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M20 21l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
-    title: 'System int',
+    title: 'System Integrations',
     description: 'System-level architecture, integration layers, and reliability-focused implementation.',
-    accent: '#FF6B00',
+    accent: '#ff8b8bff',
   },
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M3 5v14a9 3 0 0018 0V5" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M3 12a9 3 0 0018 0" stroke="currentColor" strokeWidth="1.5"/>
+        <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M3 5v14a9 3 0 0018 0V5" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M3 12a9 3 0 0018 0" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),
-    title: 'Poc sistem',
+    title: 'PoC Development',
     description: 'Rapid proof-of-concept builds to validate ideas, secure investment, and reduce technical risk.',
     accent: '#7C5CFC',
   },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M4 6h16M4 12h16M4 18h7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="17" cy="18" r="3" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M20 21l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
-    title: 'AI',
-    description: 'AI-assisted product delivery, automation, and decision support systems for modern teams.',
-    accent: '#22D3EE',
-  },
+  // {
+  //   icon: (
+  //     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+  //       <path d="M4 6h16M4 12h16M4 18h7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  //       <circle cx="17" cy="18" r="3" stroke="currentColor" strokeWidth="1.5" />
+  //       <path d="M20 21l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  //     </svg>
+  //   ),
+  //   title: 'AI',
+  //   description: 'AI-assisted product delivery, automation, and decision support systems for modern teams.',
+  //   accent: '#22D3EE',
+  // },
 ];
 
 function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
@@ -225,7 +226,7 @@ export default function Services() {
             margin: 0,
             fontFamily: "'Inter', Arial, sans-serif",
           }}>
-            End-to-end technology services across the full product lifecycle — from concept to scale.
+            End-to-end technology services across the full product lifecycle from concept to scale.
           </p>
         </div>
 

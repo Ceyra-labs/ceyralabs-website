@@ -22,10 +22,10 @@ export default function AnimatedLogo({ size = 64, animated = true, className = '
         justifyContent: 'center',
         flexShrink: 0,
         borderRadius: '50%', // Makes the background perfectly round
-        background: '#ffffff', // Set background to white
+        background: '#ffffffff', // Set background to white
         border: '1px solid rgba(0, 0, 0, 0.06)', // Subtle border to help define the circle on white screens
-        boxShadow: animated 
-          ? '0 8px 24px rgba(0, 0, 0, 0.08), 0 0 20px rgba(255, 107, 0, 0.12)' 
+        boxShadow: animated
+          ? '0 8px 24px rgba(0, 0, 0, 0.08), 0 0 20px rgba(255, 107, 0, 0.12)'
           : '0 2px 8px rgba(0, 0, 0, 0.06)',
         animation: animated ? 'float 5s ease-in-out infinite, pulse-glow 3.5s ease-in-out infinite' : undefined,
         ...style,
@@ -44,13 +44,13 @@ export default function AnimatedLogo({ size = 64, animated = true, className = '
         }}
       />
       <img
-        src="/ceyora.svg"
+        src="/Rectangle.png"
         alt="CEYRA LABS logo"
         width={size}
         height={size}
         style={{
-          width: '60%', // Scaled down slightly to leave space inside the round circle
-          height: '60%',
+          width: '95%', // Scaled down slightly to leave space inside the round circle
+          height: '95%',
           objectFit: 'contain',
           display: 'block',
           filter: animated ? 'drop-shadow(0 4px 8px rgba(255, 107, 0, 0.2))' : 'none',

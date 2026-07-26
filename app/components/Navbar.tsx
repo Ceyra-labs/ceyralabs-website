@@ -1,12 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import AnimatedLogo from './AnimatedLogo';
 
 const navLinks = [
   { label: 'Solutions', href: '#solutions' },
   { label: 'Work', href: '#portfolio' },
-  { label: 'About', href: '#about' },
+  // { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -39,7 +38,7 @@ export default function Navbar() {
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Logo + Wordmark */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <AnimatedLogo size={40} animated={false} style={{ filter: 'drop-shadow(0 0 8px rgba(255,107,0,0.5))' }} />
+          {/* <AnimatedLogo size={40} animated={false} style={{ filter: 'drop-shadow(0 0 8px rgba(255,107,0,0.5))' }} /> */}
           <span style={{
             fontFamily: "'Space Grotesk', 'Arial Narrow', Arial, sans-serif",
             fontWeight: 700,
@@ -63,7 +62,7 @@ export default function Navbar() {
                 fontSize: 15,
                 fontWeight: 500,
                 padding: '8px 16px',
-                borderRadius: 8,
+                borderRadius: 999,
                 transition: 'color 0.2s ease, background 0.2s ease',
                 fontFamily: "'Inter', Arial, sans-serif",
               }}
@@ -87,7 +86,7 @@ export default function Navbar() {
               background: 'linear-gradient(135deg, #FF6B00 0%, #FF8C00 100%)',
               color: '#fff',
               textDecoration: 'none',
-              borderRadius: 8,
+              borderRadius: 999,
               fontSize: 14,
               fontWeight: 600,
               fontFamily: "'Inter', Arial, sans-serif",

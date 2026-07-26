@@ -3,7 +3,7 @@
 import AnimatedLogo from './AnimatedLogo';
 
 const footerLinks = {
-  Solutions: ['AI', 'SE', 'App sol', 'Product desi', 'Product managt', 'Platform eng', 'System int', 'Poc sistem'],
+  Solutions: ['Software Engineering', 'AI & Machine Learning', 'Mobile Applications', 'Web Applications', 'UI/UX Design'],
   Company: ['About Us', 'Our Work', 'Careers', 'Blog', 'Contact'],
   Connect: ['LinkedIn', 'GitHub', 'Twitter / X', 'Instagram'],
 };

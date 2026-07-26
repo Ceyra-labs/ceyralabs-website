@@ -274,7 +274,7 @@ function CardAI({ index }: { index: number }) {
           </span>
         </CardHeading>
         <CardBody style={{ maxWidth: 340, marginBottom: 20 }}>
-          From LLM fine-tuning and RAG pipelines to computer vision and real-time inference — intelligence woven into every product we ship.
+          From LLM fine-tuning and RAG pipelines to computer vision and real-time inference intelligence woven into every product we ship.
         </CardBody>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           <Chip label="LLM Integration" color="rgba(255,107,0,0.12)" text="#FF8C42" />
@@ -314,7 +314,7 @@ function CardCounter({ index }: { index: number }) {
       }} />
 
       {/* Rotating ring */}
-      <div style={{
+      {/* <div style={{
         position: 'absolute',
         width: 220, height: 220,
         top: '50%', left: '50%',
@@ -323,9 +323,9 @@ function CardCounter({ index }: { index: number }) {
         border: '1px solid rgba(255,255,255,0.12)',
         animation: 'rotate-slow 12s linear infinite',
         pointerEvents: 'none',
-      }}>
-        {/* Dot on ring */}
-        <div style={{
+      }}> */}
+      {/* Dot on ring */}
+      {/* <div style={{
           position: 'absolute', top: -4, left: '50%',
           transform: 'translateX(-50%)',
           width: 8, height: 8,
@@ -343,7 +343,7 @@ function CardCounter({ index }: { index: number }) {
         border: '1px solid rgba(255,255,255,0.08)',
         animation: 'rotate-slow 20s linear infinite reverse',
         pointerEvents: 'none',
-      }} />
+      }} /> */}
 
       {/* Content */}
       <div style={{
@@ -411,9 +411,9 @@ function CardClients({ index }: { index: number }) {
           marginBottom: 20,
         }}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" stroke="#22D3EE" strokeWidth="1.5"/>
-            <path d="M12 2c-2.5 4-2.5 16 0 20M12 2c2.5 4 2.5 16 0 20M2 12h20" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round"/>
-            <path d="M4.9 7h14.2M4.9 17h14.2" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round"/>
+            <circle cx="12" cy="12" r="10" stroke="#22D3EE" strokeWidth="1.5" />
+            <path d="M12 2c-2.5 4-2.5 16 0 20M12 2c2.5 4 2.5 16 0 20M2 12h20" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M4.9 7h14.2M4.9 17h14.2" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
         </div>
         <div style={{
@@ -463,7 +463,7 @@ function CardSpeed({ index }: { index: number }) {
           marginBottom: 20,
         }}>
           <svg width="20" height="22" viewBox="0 0 20 22" fill="none">
-            <path d="M11 1L1 13h9l-1 8 10-12h-9l1-8z" fill="#A78BFA" stroke="#A78BFA" strokeWidth="1" strokeLinejoin="round"/>
+            <path d="M11 1L1 13h9l-1 8 10-12h-9l1-8z" fill="#A78BFA" stroke="#A78BFA" strokeWidth="1" strokeLinejoin="round" />
           </svg>
         </div>
         <div style={{
@@ -486,19 +486,19 @@ function CardSpeed({ index }: { index: number }) {
   );
 }
 /* ── Card E — Tech stack (2 cols × 1 row) ──────────────────────────────── */
-  const techChips = [
-    { label: 'React', color: 'rgba(97,218,251,0.12)', text: '#61DAFB' },
-    { label: 'Next.js', color: 'rgba(255,255,255,0.07)', text: '#E5E7EB' },
-    { label: 'Python', color: 'rgba(255,214,98,0.1)', text: '#FFD662' },
-    { label: 'Node.js', color: 'rgba(104,178,84,0.12)', text: '#68B254' },
-    { label: 'Wordpress', color: 'rgba(255,130,70,0.12)', text: '#FF8246' },
-    { label: 'Mongodb', color: 'rgba(74,182,74,0.12)', text: '#4AB64A' },
-    { label: 'Azure', color: 'rgba(0,120,215,0.12)', text: '#0078D4' },
-    { label: 'Vercel', color: 'rgba(255,255,255,0.12)', text: '#FFFFFF' },
-    { label: 'Figma', color: 'rgba(235,87,87,0.12)', text: '#EB5757' },
-    { label: 'PostgreSQL', color: 'rgba(51,103,145,0.15)', text: '#336791' },
-    { label: 'AWS', color: 'rgba(255,153,0,0.1)', text: '#FF9900' },
-  ];
+const techChips = [
+  { label: 'React', color: 'rgba(97,218,251,0.12)', text: '#61DAFB' },
+  { label: 'Next.js', color: 'rgba(255,255,255,0.07)', text: '#E5E7EB' },
+  { label: 'Python', color: 'rgba(255,214,98,0.1)', text: '#FFD662' },
+  { label: 'Node.js', color: 'rgba(104,178,84,0.12)', text: '#68B254' },
+  { label: 'Figma', color: 'rgba(235,87,87,0.12)', text: '#EB5757' },
+  { label: 'Wordpress', color: 'rgba(255,130,70,0.12)', text: '#FF8246' },
+  { label: 'PostgreSQL', color: 'rgba(51,103,145,0.15)', text: '#336791' },
+  { label: 'Mongodb', color: 'rgba(74,182,74,0.12)', text: '#4AB64A' },
+  { label: 'AWS', color: 'rgba(255,153,0,0.1)', text: '#FF9900' },
+  { label: 'Azure', color: 'rgba(0,120,215,0.12)', text: '#0078D4' },
+  { label: 'Vercel', color: 'rgba(255,255,255,0.12)', text: '#FFFFFF' },
+];
 
 function CardTechStack({ index }: { index: number }) {
   return (
@@ -586,8 +586,8 @@ function CardYears({ index }: { index: number }) {
           marginBottom: 20,
         }}>
           <svg width="20" height="22" viewBox="0 0 20 22" fill="none">
-            <path d="M10 1L1 5v6c0 5.25 3.79 10.15 9 11.33C15.21 21.15 19 16.25 19 11V5L10 1z" stroke="#FF8C42" strokeWidth="1.5" strokeLinejoin="round"/>
-            <path d="M6 11l3 3 5-5" stroke="#FF8C42" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M10 1L1 5v6c0 5.25 3.79 10.15 9 11.33C15.21 21.15 19 16.25 19 11V5L10 1z" stroke="#FF8C42" strokeWidth="1.5" strokeLinejoin="round" />
+            <path d="M6 11l3 3 5-5" stroke="#FF8C42" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
         <div style={{
@@ -659,7 +659,7 @@ function SectionHeading() {
         lineHeight: 1.65,
         fontFamily: "'Inter', Arial, sans-serif",
       }}>
-        A full-spectrum technology partner — from first commit to production scale.
+        A full-spectrum technology partner from first commit to production scale.
       </p>
     </div>
   );

@@ -1,7 +1,6 @@
 import Navbar from '@/app/components/Navbar';
 import Hero from '@/app/components/Hero';
 import Services from '@/app/components/Services';
-import Stats from '@/app/components/Stats';
 import Portfolio from '@/app/components/Portfolio';
 import Cta from '@/app/components/Cta';
 import Footer from '@/app/components/Footer';
@@ -16,7 +15,7 @@ export default function Home() {
         <Hero />
         <BentoGrid />
         <Services />
-        <Stats />
+        {/* <Stats /> */}
         <Portfolio />
         <Cta />
       </main>

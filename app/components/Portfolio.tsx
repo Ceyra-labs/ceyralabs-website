@@ -13,9 +13,9 @@ const projects = [
     gradient: 'linear-gradient(135deg, rgba(255,107,0,0.15) 0%, rgba(255,60,0,0.05) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <circle cx="16" cy="16" r="14" stroke="rgba(255,107,0,0.3)" strokeWidth="1"/>
-        <path d="M10 16h12M16 10l6 6-6 6" stroke="#FF6B00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <circle cx="16" cy="16" r="2" fill="#FF6B00"/>
+        <circle cx="16" cy="16" r="14" stroke="rgba(255,107,0,0.3)" strokeWidth="1" />
+        <path d="M10 16h12M16 10l6 6-6 6" stroke="#FF6B00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="16" cy="16" r="2" fill="#FF6B00" />
       </svg>
     ),
     result: '14M+ monthly impressions',
@@ -30,8 +30,8 @@ const projects = [
     gradient: 'linear-gradient(135deg, rgba(124,92,252,0.15) 0%, rgba(90,60,220,0.05) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <rect x="6" y="6" width="20" height="20" rx="4" stroke="#7C5CFC" strokeWidth="1.5"/>
-        <path d="M11 12h10M11 16h10M11 20h6" stroke="#7C5CFC" strokeWidth="1.5" strokeLinecap="round"/>
+        <rect x="6" y="6" width="20" height="20" rx="4" stroke="#7C5CFC" strokeWidth="1.5" />
+        <path d="M11 12h10M11 16h10M11 20h6" stroke="#7C5CFC" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     result: '300K+ creators active',
@@ -46,8 +46,8 @@ const projects = [
     gradient: 'linear-gradient(135deg, rgba(34,211,238,0.12) 0%, rgba(6,182,212,0.04) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path d="M8 10h16M8 15h16M8 20h10" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round"/>
-        <rect x="6" y="6" width="20" height="20" rx="3" stroke="#22D3EE" strokeWidth="1.5"/>
+        <path d="M8 10h16M8 15h16M8 20h10" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="6" y="6" width="20" height="20" rx="3" stroke="#22D3EE" strokeWidth="1.5" />
       </svg>
     ),
     result: '85% higher retention rate',
@@ -233,7 +233,7 @@ export default function Portfolio() {
               Projects That Define Us
             </h2>
           </div>
-          <a
+          {/* <a
             href="#contact"
             style={{
               padding: '10px 24px',
@@ -264,7 +264,7 @@ export default function Portfolio() {
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </a>
+          </a> */}
         </div>
 
         <div style={{

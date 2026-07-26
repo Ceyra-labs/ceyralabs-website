@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import AnimatedLogo from './AnimatedLogo';
 
-const words = ['Intelligent', 'Scalable', 'Future-Ready'];
+const words = ['Intelligent', 'Secure', 'Resilient'];
 
 export default function Hero() {
   const wordRef = useRef<HTMLSpanElement>(null);
@@ -148,8 +148,8 @@ export default function Hero() {
             animation: 'fade-in-up 0.6s ease 0.35s both',
           }}>
             Build{' '}
-            <span className="gradient-text" style={{ display: 'inline-block', minWidth: 220 }}>
-              <span ref={wordRef} style={{ display: 'inline-block', minWidth: 170, textAlign: 'left' }}>Intelligent</span>
+            <span className="gradient-text" style={{ display: 'inline-block', minWidth: 260 }}>
+              <span ref={wordRef} style={{ display: 'inline-block', minWidth: 210, textAlign: 'left' }}>Intelligent</span>
               <span style={{
                 display: 'inline-block',
                 width: 2,
@@ -174,7 +174,7 @@ export default function Hero() {
             fontWeight: 400,
             animation: 'fade-in-up 0.6s ease 0.5s both',
           }}>
-            We design and engineer enterprise-grade software solutions — from AI systems and mobile apps to platform infrastructure and blockchain technology.
+            We design and engineer enterprise-grade software solutions from AI systems and mobile apps to platform infrastructure and blockchain technology.
           </p>
 
           {/* CTA buttons */}
@@ -191,7 +191,7 @@ export default function Hero() {
                 background: 'linear-gradient(135deg, #FF6B00 0%, #FF8C00 100%)',
                 color: '#fff',
                 textDecoration: 'none',
-                borderRadius: 8,
+                borderRadius: 999,
                 fontSize: 15,
                 fontWeight: 600,
                 fontFamily: "'Inter', Arial, sans-serif",
@@ -212,7 +212,7 @@ export default function Hero() {
             >
               Start a Project
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
             <a
@@ -222,7 +222,7 @@ export default function Hero() {
                 background: 'transparent',
                 color: '#F5F5F7',
                 textDecoration: 'none',
-                borderRadius: 8,
+                borderRadius: 999,
                 fontSize: 15,
                 fontWeight: 500,
                 fontFamily: "'Inter', Arial, sans-serif",
@@ -289,22 +289,22 @@ export default function Hero() {
           {/* Orbital rings */}
           <div style={{
             position: 'absolute',
-            width: 320,
-            height: 320,
+            width: 420,
+            height: 420,
             borderRadius: '50%',
             border: '1px solid rgba(255,107,0,0.08)',
           }} />
           <div style={{
             position: 'absolute',
-            width: 420,
-            height: 420,
+            width: 520,
+            height: 520,
             borderRadius: '50%',
             border: '1px dashed rgba(124,92,252,0.1)',
           }} />
           <div style={{
             position: 'absolute',
-            width: 240,
-            height: 240,
+            width: 340,
+            height: 340,
             borderRadius: '50%',
             border: '1px solid rgba(34,211,238,0.08)',
           }} />
@@ -342,7 +342,7 @@ export default function Hero() {
             animation: 'float 4s ease-in-out infinite',
           }}>
             <AnimatedLogo
-              size={200}
+              size={300}
               animated
               style={{ filter: 'drop-shadow(0 0 30px rgba(255,107,0,0.4))' }}
             />
