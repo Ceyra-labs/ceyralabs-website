@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { PorscheDesignSystemProvider } from '@porsche-design-system/components-react';
+
 import './globals.css';
 
 export const metadata: Metadata = {

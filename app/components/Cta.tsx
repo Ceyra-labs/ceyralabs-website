@@ -274,7 +274,7 @@ export default function Cta() {
                       />
                     </svg>
                   ),
-                  label: 'hello@ceyralabs.com',
+                  label: 'ceyralabs@outlook.com',
                 },
                 {
                   icon: (
