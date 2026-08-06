@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import ceyraText from '../../public/ceyra-text.png';
 
 const navLinks = [
   { label: 'Solutions', href: '#solutions' },
@@ -39,15 +41,16 @@ export default function Navbar() {
         {/* Logo + Wordmark */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
           {/* <AnimatedLogo size={40} animated={false} style={{ filter: 'drop-shadow(0 0 8px rgba(255,107,0,0.5))' }} /> */}
-          <span style={{
-            fontFamily: "'Space Grotesk', 'Arial Narrow', Arial, sans-serif",
-            fontWeight: 700,
-            fontSize: 20,
-            letterSpacing: '0.08em',
-            color: '#F5F5F7',
-          }}>
-            CEYRA <span className="gradient-text">LABS</span>
-          </span>
+          <Image
+            src={ceyraText}
+            alt="Ceyra Labs"
+            style={{
+              height: '32px',
+              width: 'auto',
+              display: 'block',
+            }}
+            priority
+          />
         </a>
 
         {/* Desktop nav */}

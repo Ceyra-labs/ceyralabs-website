@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : 'https://ceyralabs.com'
+      : 'https://www.ceyralabs.com'
   ),
   title: {
     default: 'Ceyra Labs - Intelligence in Motion',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'Custom Software Development',
     'Next-Gen Tech Lab'
   ],
-  authors: [{ name: 'Ceyra Labs', url: 'https://ceyralabs.com' }],
+  authors: [{ name: 'Ceyra Labs', url: 'https://www.ceyralabs.com' }],
   creator: 'Ceyra Labs',
   publisher: 'Ceyra Labs',
   robots: {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ceyra Labs - Intelligence in Motion',
     description: 'Ceyra Labs builds intelligent, scalable, future-ready software — AI, mobile apps, platform engineering, blockchain, and more.',
-    url: 'https://ceyralabs.com',
+    url: 'https://www.ceyralabs.com',
     siteName: 'Ceyra Labs',
     images: [
       {
@@ -91,9 +91,9 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     'name': 'Ceyra Labs',
-    'url': 'https://ceyralabs.com',
-    'logo': 'https://ceyralabs.com/ceyra.svg',
-    'image': 'https://ceyralabs.com/og-image.png',
+    'url': 'https://www.ceyralabs.com',
+    'logo': 'https://www.ceyralabs.com/ceyra.svg',
+    'image': 'https://www.ceyralabs.com/og-image.png',
     'description': 'Ceyra Labs builds intelligent, scalable, future-ready software — AI, mobile apps, platform engineering, blockchain, and more.',
     'email': 'hello@ceyralabs.com',
     'knowsAbout': [
