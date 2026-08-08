@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ceyralabs.com';
+  const baseUrl = 'https://www.ceyralabs.com';
 
   // Single page landing site for now, but configured to be easily extensible.
   const routes = [
