@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
+// Removed individual 'accent' colors to unify under the Brand Primary (#FF6A00)
 const services = [
   {
     icon: (
@@ -12,7 +13,6 @@ const services = [
     ),
     title: 'Software Development',
     description: 'Full-stack engineering with scalable architecture, clean code principles, and enterprise reliability.',
-    accent: '#7C5CFC',
   },
   {
     icon: (
@@ -24,7 +24,6 @@ const services = [
     ),
     title: 'Mobile Applications',
     description: 'Cross-platform mobile applications for iOS and Android built with performance-first principles.',
-    accent: '#22D3EE',
   },
   {
     icon: (
@@ -34,7 +33,6 @@ const services = [
     ),
     title: 'UI/UX Design',
     description: 'User-centric UI/UX design with research-driven decisions and refined design systems.',
-    accent: '#FF6B00',
   },
   {
     icon: (
@@ -44,9 +42,7 @@ const services = [
     ),
     title: 'Artificial Intelligence',
     description: 'Machine learning systems, LLM integrations, computer vision, and intelligent automation pipelines.',
-    accent: '#09ff00ff',
   },
-
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -55,7 +51,6 @@ const services = [
     ),
     title: 'Product Management',
     description: 'Strategic product lifecycle management from ideation to launch with agile execution.',
-    accent: '#7C5CFC',
   },
   {
     icon: (
@@ -67,7 +62,6 @@ const services = [
     ),
     title: 'Platform Engineering',
     description: 'Cloud infrastructure, DevOps pipelines, microservices, and highly available distributed systems.',
-    accent: '#22D3EE',
   },
   {
     icon: (
@@ -79,7 +73,6 @@ const services = [
     ),
     title: 'System Integrations',
     description: 'System-level architecture, integration layers, and reliability-focused implementation.',
-    accent: '#ff8b8bff',
   },
   {
     icon: (
@@ -91,20 +84,7 @@ const services = [
     ),
     title: 'PoC Development',
     description: 'Rapid proof-of-concept builds to validate ideas, secure investment, and reduce technical risk.',
-    accent: '#7C5CFC',
   },
-  // {
-  //   icon: (
-  //     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-  //       <path d="M4 6h16M4 12h16M4 18h7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  //       <circle cx="17" cy="18" r="3" stroke="currentColor" strokeWidth="1.5" />
-  //       <path d="M20 21l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  //     </svg>
-  //   ),
-  //   title: 'AI',
-  //   description: 'AI-assisted product delivery, automation, and decision support systems for modern teams.',
-  //   accent: '#22D3EE',
-  // },
 ];
 
 function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
@@ -124,44 +104,18 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   return (
     <div
       ref={ref}
-      className="reveal ceyr-card"
+      className="reveal brand-service-card"
       style={{
-        padding: '28px',
-        cursor: 'default',
         transitionDelay: `${(index % 5) * 0.08}s`,
       }}
     >
-      <div style={{
-        width: 48,
-        height: 48,
-        borderRadius: 10,
-        background: `rgba(${service.accent === '#FF6B00' ? '255,107,0' : service.accent === '#7C5CFC' ? '124,92,252' : '34,211,238'}, 0.1)`,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: service.accent,
-        marginBottom: 16,
-        transition: 'background 0.25s ease',
-      }}>
+      <div className="icon-wrapper">
         {service.icon}
       </div>
-      <h3 style={{
-        fontFamily: "'Space Grotesk', Arial, sans-serif",
-        fontSize: 17,
-        fontWeight: 600,
-        color: '#F5F5F7',
-        margin: '0 0 8px',
-        lineHeight: 1.3,
-      }}>
+      <h3 className="card-title">
         {service.title}
       </h3>
-      <p style={{
-        fontSize: 14,
-        color: '#A1A1AA',
-        lineHeight: 1.6,
-        margin: 0,
-        fontFamily: "'Inter', Arial, sans-serif",
-      }}>
+      <p className="card-description">
         {service.description}
       </p>
     </div>
@@ -183,45 +137,120 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="solutions" style={{ background: '#0A0A0F', padding: 'clamp(80px, 10vw, 140px) 0', position: 'relative' }}>
-      {/* Subtle divider line */}
+    <section id="solutions" style={{ background: '#000000', padding: 'clamp(80px, 10vw, 140px) 0', position: 'relative' }}>
+
+      {/* Embedded CSS for strict brand guideline enforcement & modern interactions */}
+      <style>{`
+        .reveal {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .brand-service-card {
+          background-color: #0E0E12; /* Surface */
+          border: 1px solid #262626; /* Border */
+          border-radius: 16px;
+          padding: 28px;
+          cursor: default;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .brand-service-card:hover {
+          border-color: #FF6A00; /* Primary */
+          box-shadow: 0 12px 32px -12px rgba(255, 138, 0, 0.15); /* Glow */
+          transform: translateY(-4px);
+        }
+
+        .icon-wrapper {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          background: rgba(255, 106, 0, 0.1); /* 10% Primary */
+          color: #FF6A00; /* Primary */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          transition: all 0.4s ease;
+          border: 1px solid transparent;
+        }
+
+        .brand-service-card:hover .icon-wrapper {
+          background: rgba(255, 138, 0, 0.15); /* 15% Glow */
+          border-color: rgba(255, 106, 0, 0.3);
+          transform: scale(1.05);
+        }
+
+        .card-title {
+          font-family: 'Montserrat', Arial, sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          color: #F5F5F5; /* Primary Text */
+          margin: 0 0 10px;
+          line-height: 1.3;
+        }
+
+        .card-description {
+          font-family: 'Inter', Arial, sans-serif;
+          font-size: 14px;
+          color: #A3A3A3; /* Secondary Text */
+          line-height: 1.65;
+          margin: 0;
+        }
+
+        .text-gradient {
+          background: linear-gradient(135deg, #FF6A00 0%, #FF8A00 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      `}</style>
+
+      {/* Subtle divider line - updated to border color */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: '10%',
         right: '10%',
         height: 1,
-        background: 'linear-gradient(90deg, transparent, #2A2A35, transparent)',
+        background: 'linear-gradient(90deg, transparent, #262626, transparent)',
       }} />
 
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 32px' }}>
+
         {/* Heading */}
-        <div ref={headingRef} className="reveal" style={{ marginBottom: 64, maxWidth: 600 }}>
+        <div ref={headingRef} className="reveal" style={{ marginBottom: 64, maxWidth: 640 }}>
           <div style={{
             fontSize: 12,
             fontWeight: 600,
             letterSpacing: '0.18em',
-            color: '#FF6B00',
-            fontFamily: "'Inter', Arial, sans-serif",
-            marginBottom: 14,
+            color: '#FF6A00', /* Primary */
+            fontFamily: "'Montserrat', Arial, sans-serif",
+            marginBottom: 16,
             textTransform: 'uppercase',
           }}>
             What We Build
           </div>
           <h2 style={{
-            fontFamily: "'Space Grotesk', Arial, sans-serif",
-            fontSize: 'clamp(28px, 3.5vw, 46px)',
+            fontFamily: "'Montserrat', Arial, sans-serif",
+            fontSize: 'clamp(32px, 4vw, 48px)',
             fontWeight: 700,
-            color: '#F5F5F7',
-            margin: '0 0 18px',
+            color: '#F5F5F5', /* Primary Text */
+            margin: '0 0 20px',
             lineHeight: 1.15,
+            letterSpacing: '-0.02em'
           }}>
             Solutions That Drive{' '}
-            <span className="gradient-text">Real Results</span>
+            <span className="text-gradient">Real Results</span>
           </h2>
           <p style={{
             fontSize: 17,
-            color: '#A1A1AA',
+            color: '#A3A3A3', /* Secondary Text */
             lineHeight: 1.7,
             margin: 0,
             fontFamily: "'Inter', Arial, sans-serif",
@@ -233,8 +262,8 @@ export default function Services() {
         {/* Services grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
-          gap: 16,
+          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gap: 20,
         }}>
           {services.map((service, i) => (
             <ServiceCard key={service.title} service={service} index={i} />
