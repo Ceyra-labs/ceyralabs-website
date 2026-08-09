@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
+// Unified to use Brand Primary (#FF6A00) and Glow (#FF8A00)
 const projects = [
   {
     id: 'pulse-feed',
@@ -9,13 +10,11 @@ const projects = [
     title: 'PulseFeed Engine',
     description: 'A real-time content aggregation and engagement engine with automated feed updates and social analytics.',
     tags: ['Next.js', 'Tailwind CSS', 'Socket.io', 'Redis'],
-    accent: '#FF6B00',
-    gradient: 'linear-gradient(135deg, rgba(255,107,0,0.15) 0%, rgba(255,60,0,0.05) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <circle cx="16" cy="16" r="14" stroke="rgba(255,107,0,0.3)" strokeWidth="1" />
-        <path d="M10 16h12M16 10l6 6-6 6" stroke="#FF6B00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="16" cy="16" r="2" fill="#FF6B00" />
+        <circle cx="16" cy="16" r="14" stroke="rgba(255,106,0,0.3)" strokeWidth="1" />
+        <path d="M10 16h12M16 10l6 6-6 6" stroke="#FF6A00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="16" cy="16" r="2" fill="#FF6A00" />
       </svg>
     ),
     result: '14M+ monthly impressions',
@@ -26,12 +25,10 @@ const projects = [
     title: 'BioFlow Creator Hub',
     description: 'A customizable link-in-bio platform for creators to centralize social profiles, track audience clicks, and host micro-blogs.',
     tags: ['TypeScript', 'Next.js', 'Prisma', 'Tailwind'],
-    accent: '#7C5CFC',
-    gradient: 'linear-gradient(135deg, rgba(124,92,252,0.15) 0%, rgba(90,60,220,0.05) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <rect x="6" y="6" width="20" height="20" rx="4" stroke="#7C5CFC" strokeWidth="1.5" />
-        <path d="M11 12h10M11 16h10M11 20h6" stroke="#7C5CFC" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="6" y="6" width="20" height="20" rx="4" stroke="#FF6A00" strokeWidth="1.5" />
+        <path d="M11 12h10M11 16h10M11 20h6" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     result: '300K+ creators active',
@@ -42,15 +39,13 @@ const projects = [
     title: 'VibeSpace Portal',
     description: 'A dynamic, browser-based discussion forum featuring live chat rooms, thread-based updates, and profile customizers.',
     tags: ['React', 'Node.js', 'WebRTC', 'MongoDB'],
-    accent: '#22D3EE',
-    gradient: 'linear-gradient(135deg, rgba(34,211,238,0.12) 0%, rgba(6,182,212,0.04) 100%)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path d="M8 10h16M8 15h16M8 20h10" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round" />
-        <rect x="6" y="6" width="20" height="20" rx="3" stroke="#22D3EE" strokeWidth="1.5" />
+        <path d="M8 10h16M8 15h16M8 20h10" stroke="#FF6A00" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="6" y="6" width="20" height="20" rx="3" stroke="#FF6A00" strokeWidth="1.5" />
       </svg>
     ),
-    result: '85% higher retention rate',
+    result: '85% higher retention',
   },
 ];
 
@@ -68,112 +63,38 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
     return () => observer.disconnect();
   }, []);
 
-  const rgbMap: Record<string, string> = {
-    '#FF6B00': '255,107,0',
-    '#7C5CFC': '124,92,252',
-    '#22D3EE': '34,211,238',
-  };
-
   return (
     <div
       ref={ref}
-      className="reveal ceyr-card"
-      style={{
-        transitionDelay: `${index * 0.15}s`,
-        overflow: 'hidden',
-        position: 'relative',
-      }}
+      className="reveal brand-card"
+      style={{ transitionDelay: `${index * 0.15}s` }}
     >
       {/* Gradient header area */}
-      <div style={{
-        background: project.gradient,
-        borderBottom: `1px solid rgba(${rgbMap[project.accent]}, 0.15)`,
-        padding: '32px 28px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        minHeight: 120,
-      }}>
-        <div>
-          <div style={{
-            display: 'inline-block',
-            padding: '4px 12px',
-            background: `rgba(${rgbMap[project.accent]}, 0.15)`,
-            border: `1px solid rgba(${rgbMap[project.accent]}, 0.25)`,
-            borderRadius: 100,
-            fontSize: 11,
-            fontWeight: 600,
-            color: project.accent,
-            letterSpacing: '0.1em',
-            fontFamily: "'Inter', Arial, sans-serif",
-            marginBottom: 12,
-            textTransform: 'uppercase',
-          }}>
+      <div className="card-header">
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '12px' }}>
+          <div className="category-pill">
             {project.category}
           </div>
-          <div style={{
-            padding: '6px 16px',
-            background: `rgba(${rgbMap[project.accent]}, 0.12)`,
-            borderRadius: 8,
-            display: 'inline-block',
-          }}>
-            <span style={{
-              fontSize: 12,
-              fontWeight: 600,
-              color: project.accent,
-              fontFamily: "'Space Grotesk', Arial, sans-serif",
-            }}>
-              {project.result}
-            </span>
+          <div className="result-pill">
+            {project.result}
           </div>
         </div>
-        <div style={{
-          width: 72,
-          height: 72,
-          borderRadius: '50%',
-          background: `rgba(${rgbMap[project.accent]}, 0.08)`,
-          border: `1px solid rgba(${rgbMap[project.accent]}, 0.2)`,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexShrink: 0,
-        }}>
+        <div className="icon-container">
           {project.icon}
         </div>
       </div>
 
-      {/* Content */}
-      <div style={{ padding: '24px 28px' }}>
-        <h3 style={{
-          fontFamily: "'Space Grotesk', Arial, sans-serif",
-          fontSize: 19,
-          fontWeight: 600,
-          color: '#F5F5F7',
-          margin: '0 0 10px',
-          lineHeight: 1.3,
-        }}>
+      {/* Content area */}
+      <div style={{ padding: '28px' }}>
+        <h3 className="card-title">
           {project.title}
         </h3>
-        <p style={{
-          fontSize: 14,
-          color: '#A1A1AA',
-          lineHeight: 1.65,
-          margin: '0 0 20px',
-          fontFamily: "'Inter', Arial, sans-serif",
-        }}>
+        <p className="card-description">
           {project.description}
         </p>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           {project.tags.map((tag) => (
-            <span key={tag} style={{
-              padding: '4px 10px',
-              background: '#1C1C26',
-              border: '1px solid #2A2A35',
-              borderRadius: 6,
-              fontSize: 12,
-              color: '#A1A1AA',
-              fontFamily: "'Inter', Arial, sans-serif",
-            }}>
+            <span key={tag} className="tag-pill">
               {tag}
             </span>
           ))}
@@ -198,79 +119,160 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <section id="portfolio" style={{ background: '#0A0A0F', padding: 'clamp(80px, 10vw, 140px) 0', position: 'relative' }}>
+    <section id="portfolio" style={{ background: '#000000', padding: 'clamp(80px, 10vw, 140px) 0', position: 'relative' }}>
+      {/* Injected CSS for modern hover effects, typography, and specific branding */}
+      <style>{`
+        .reveal {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .brand-card {
+          background-color: #0E0E12;
+          border: 1px solid #262626;
+          border-radius: 16px;
+          overflow: hidden;
+          position: relative;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .brand-card:hover {
+          border-color: #FF6A00;
+          box-shadow: 0 12px 40px -12px rgba(255, 138, 0, 0.2);
+          transform: translateY(-4px);
+        }
+
+        .card-header {
+          background: linear-gradient(135deg, rgba(255,106,0,0.12) 0%, rgba(255,138,0,0.03) 100%);
+          border-bottom: 1px solid #262626;
+          padding: 32px 28px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          min-height: 120px;
+        }
+
+        .category-pill {
+          padding: 6px 14px;
+          background: rgba(255, 106, 0, 0.1);
+          border: 1px solid rgba(255, 106, 0, 0.2);
+          border-radius: 100px;
+          font-size: 11px;
+          font-weight: 600;
+          color: #FF6A00;
+          letter-spacing: 0.12em;
+          font-family: 'Montserrat', Arial, sans-serif;
+          text-transform: uppercase;
+        }
+
+        .result-pill {
+          padding: 6px 16px;
+          background: #000000;
+          border: 1px solid #262626;
+          border-radius: 8px;
+          font-size: 12px;
+          font-weight: 500;
+          color: #F5F5F5;
+          font-family: 'Inter', Arial, sans-serif;
+        }
+
+        .icon-container {
+          width: 64px;
+          height: 64px;
+          border-radius: 16px;
+          background: #000000;
+          border: 1px solid #262626;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          box-shadow: 0 4px 20px rgba(255, 138, 0, 0.08);
+          transition: transform 0.4s ease;
+        }
+
+        .brand-card:hover .icon-container {
+          transform: scale(1.05) rotate(2deg);
+          border-color: rgba(255,106,0,0.4);
+        }
+
+        .card-title {
+          font-family: 'Montserrat', Arial, sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          color: #F5F5F5;
+          margin: 0 0 12px;
+          line-height: 1.3;
+        }
+
+        .card-description {
+          font-size: 14px;
+          color: #A3A3A3;
+          line-height: 1.65;
+          margin: 0 0 24px;
+          font-family: 'Inter', Arial, sans-serif;
+        }
+
+        .tag-pill {
+          padding: 6px 12px;
+          background: #000000;
+          border: 1px solid #262626;
+          border-radius: 6px;
+          font-size: 12px;
+          color: #6B7280;
+          font-family: 'Inter', Arial, sans-serif;
+        }
+      `}</style>
+
+      {/* Top Divider */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: '10%',
         right: '10%',
         height: 1,
-        background: 'linear-gradient(90deg, transparent, #2A2A35, transparent)',
+        background: 'linear-gradient(90deg, transparent, #262626, transparent)',
       }} />
 
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 32px' }}>
-        <div ref={headingRef} className="reveal" style={{ marginBottom: 60, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20 }}>
+
+        {/* Header Section */}
+        <div ref={headingRef} className="reveal" style={{ marginBottom: 64, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20 }}>
           <div>
             <div style={{
               fontSize: 12,
               fontWeight: 600,
               letterSpacing: '0.18em',
-              color: '#FF6B00',
-              fontFamily: "'Inter', Arial, sans-serif",
-              marginBottom: 14,
+              color: '#FF6A00', /* Primary */
+              fontFamily: "'Montserrat', Arial, sans-serif",
+              marginBottom: 16,
               textTransform: 'uppercase',
             }}>
               Our Projects
             </div>
             <h2 style={{
-              fontFamily: "'Space Grotesk', Arial, sans-serif",
-              fontSize: 'clamp(28px, 3.5vw, 46px)',
+              fontFamily: "'Montserrat', Arial, sans-serif",
+              fontSize: 'clamp(32px, 4vw, 48px)',
               fontWeight: 700,
-              color: '#F5F5F7',
+              color: '#F5F5F5', /* Primary Text */
               margin: 0,
               lineHeight: 1.15,
+              letterSpacing: '-0.02em'
             }}>
               Projects That Define Us
             </h2>
           </div>
-          {/* <a
-            href="#contact"
-            style={{
-              padding: '10px 24px',
-              border: '1px solid #2A2A35',
-              borderRadius: 8,
-              color: '#A1A1AA',
-              textDecoration: 'none',
-              fontSize: 14,
-              fontFamily: "'Inter', Arial, sans-serif",
-              transition: 'color 0.2s, border-color 0.2s',
-              whiteSpace: 'nowrap',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 8,
-            }}
-            onMouseEnter={(e) => {
-              const el = e.currentTarget as HTMLAnchorElement;
-              el.style.color = '#F5F5F7';
-              el.style.borderColor = 'rgba(255,107,0,0.4)';
-            }}
-            onMouseLeave={(e) => {
-              const el = e.currentTarget as HTMLAnchorElement;
-              el.style.color = '#A1A1AA';
-              el.style.borderColor = '#2A2A35';
-            }}
-          >
-            View All Work
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a> */}
         </div>
 
+        {/* Grid Section */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-          gap: 20,
+          gap: 24,
         }}>
           {projects.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
