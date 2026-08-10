@@ -53,6 +53,7 @@ function BentoCard({
   style,
   innerStyle,
   hoverGlow,
+  className,
 }: {
   children: ReactNode;
   index?: number;
@@ -61,6 +62,7 @@ function BentoCard({
   style?: CSSProperties;
   innerStyle?: CSSProperties;
   hoverGlow?: string;
+  className?: string;
 }) {
   const { ref, visible } = useReveal();
   const [hovered, setHovered] = useState(false);
@@ -71,6 +73,7 @@ function BentoCard({
       ref={ref}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      className={`bento-card ${className || ''}`}
       style={{
         gridColumn: `span ${colSpan}`,
         gridRow: `span ${rowSpan}`,
@@ -179,6 +182,7 @@ function CardAI({ index }: { index: number }) {
     <BentoCard
       index={index}
       colSpan={2}
+      className="bento-card-ai"
       hoverGlow="rgba(255,107,0,0.08)"
       style={{ minHeight: 280 }}
     >
@@ -213,6 +217,7 @@ function CardAI({ index }: { index: number }) {
       <svg
         width="240" height="140"
         viewBox="0 0 240 140"
+        className="bento-ai-svg"
         style={{ position: 'absolute', right: 24, bottom: 20, opacity: 0.18 }}
       >
         {/* Connecting lines */}
@@ -261,7 +266,7 @@ function CardAI({ index }: { index: number }) {
       </svg>
 
       {/* Text content */}
-      <div style={{ padding: '36px 36px 36px', position: 'relative' }}>
+      <div className="bento-content-pad" style={{ padding: '36px', position: 'relative' }}>
         <CardLabel>Intelligence Layer</CardLabel>
         <CardHeading size={28}>
           AI-First Engineering,<br />
@@ -289,13 +294,14 @@ function CardAI({ index }: { index: number }) {
 /* ── Card B — Projects counter (1 col × 2 rows, orange) ─────────────────── */
 function CardCounter({ index }: { index: number }) {
   const { ref, visible } = useReveal();
-  const count = useCounter(50, visible, 300);
+  const count = useCounter(15, visible, 300);
 
   return (
     <BentoCard
       index={index}
       colSpan={1}
       rowSpan={2}
+      className="bento-card-counter"
       hoverGlow="rgba(255,107,0,0.12)"
       style={{
         background: 'linear-gradient(160deg, #FF6B00 0%, #C44A00 100%)',
@@ -346,7 +352,7 @@ function CardCounter({ index }: { index: number }) {
       }} /> */}
 
       {/* Content */}
-      <div style={{
+      <div className="bento-content-pad-center" style={{
         position: 'relative', height: '100%',
         display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
@@ -380,7 +386,7 @@ function CardCounter({ index }: { index: number }) {
           color: 'rgba(255,255,255,0.6)',
           fontFamily: "'Inter', Arial, sans-serif",
         }}>
-          Across 25+ industries
+          Across 5+ industries
         </div>
       </div>
     </BentoCard>
@@ -390,10 +396,10 @@ function CardCounter({ index }: { index: number }) {
 /* ── Card C — Clients counter (1 col × 1 row) ──────────────────────────── */
 function CardClients({ index }: { index: number }) {
   const { ref, visible } = useReveal();
-  const count = useCounter(30, visible, 400);
+  const count = useCounter(10, visible, 400);
 
   return (
-    <BentoCard index={index} colSpan={1} hoverGlow="rgba(34,211,238,0.08)">
+    <BentoCard index={index} colSpan={1} className="bento-card-clients" hoverGlow="rgba(34,211,238,0.08)">
       <div ref={ref} style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} />
       {/* Subtle teal glow */}
       <div style={{
@@ -402,7 +408,7 @@ function CardClients({ index }: { index: number }) {
         background: 'radial-gradient(circle, rgba(34,211,238,0.08) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
-      <div style={{ padding: '32px 28px' }}>
+      <div className="bento-content-pad" style={{ padding: '32px 28px' }}>
         {/* Globe SVG */}
         <div style={{
           width: 44, height: 44, borderRadius: 12,
@@ -440,6 +446,7 @@ function CardSpeed({ index }: { index: number }) {
     <BentoCard
       index={index}
       colSpan={1}
+      className="bento-card-speed"
       hoverGlow="rgba(124,92,252,0.12)"
       style={{
         background: 'linear-gradient(145deg, #2A1F6E 0%, #1A1240 100%)',
@@ -454,7 +461,7 @@ function CardSpeed({ index }: { index: number }) {
         pointerEvents: 'none',
       }} />
 
-      <div style={{ padding: '32px 28px' }}>
+      <div className="bento-content-pad" style={{ padding: '32px 28px' }}>
         {/* Lightning icon */}
         <div style={{
           width: 44, height: 44, borderRadius: 12,
@@ -505,6 +512,7 @@ function CardTechStack({ index }: { index: number }) {
     <BentoCard
       index={index}
       colSpan={2}
+      className="bento-card-techstack"
       hoverGlow="rgba(255,107,0,0.06)"
       style={{ minHeight: 200 }}
     >
@@ -516,7 +524,7 @@ function CardTechStack({ index }: { index: number }) {
         pointerEvents: 'none',
       }} />
 
-      <div style={{ padding: '36px 36px' }}>
+      <div className="bento-content-pad" style={{ padding: '36px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24 }}>
           <div>
             <CardLabel>Technology</CardLabel>
@@ -560,12 +568,13 @@ function CardTechStack({ index }: { index: number }) {
 /* ── Card F — Years / Experience (1 col × 1 row) ──────────────────────────── */
 function CardYears({ index }: { index: number }) {
   const { ref, visible } = useReveal();
-  const count = useCounter(5, visible, 300);
+  const count = useCounter(3, visible, 300);
 
   return (
     <BentoCard
       index={index}
       colSpan={1}
+      className="bento-card-years"
       hoverGlow="rgba(255,107,0,0.08)"
     >
       <div ref={ref} style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} />
@@ -577,7 +586,7 @@ function CardYears({ index }: { index: number }) {
         pointerEvents: 'none',
       }} />
 
-      <div style={{ padding: '32px 28px' }}>
+      <div className="bento-content-pad" style={{ padding: '32px 28px' }}>
         {/* Shield icon */}
         <div style={{
           width: 44, height: 44, borderRadius: 12,
@@ -669,7 +678,7 @@ function SectionHeading() {
 export default function BentoGrid() {
   return (
     <>
-      {/* Keyframes injected once */}
+      {/* Keyframes and responsive layout injected once */}
       <style>{`
         @keyframes bento-blob-1 {
           0%, 100% { transform: translate(0, 0) scale(1); }
@@ -684,6 +693,64 @@ export default function BentoGrid() {
         @keyframes chip-pop {
           from { opacity: 0; transform: scale(0.85) translateY(6px); }
           to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .bento-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 14px;
+        }
+
+        @media (max-width: 1024px) {
+          .bento-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 12px;
+          }
+          .bento-card-ai {
+            grid-column: span 2 !important;
+          }
+          .bento-card-counter {
+            grid-column: span 1 !important;
+            grid-row: span 2 !important;
+          }
+          .bento-card-clients {
+            grid-column: span 1 !important;
+          }
+          .bento-card-speed {
+            grid-column: span 1 !important;
+          }
+          .bento-card-techstack {
+            grid-column: span 2 !important;
+          }
+          .bento-card-years {
+            grid-column: span 2 !important;
+          }
+          .bento-content-pad {
+            padding: 28px !important;
+          }
+          .bento-content-pad-center {
+            padding: 24px !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .bento-grid {
+            grid-template-columns: 1fr !important;
+            gap: 12px;
+          }
+          .bento-card {
+            grid-column: span 1 !important;
+            grid-row: span 1 !important;
+          }
+          .bento-ai-svg {
+            display: none !important;
+          }
+          .bento-content-pad {
+            padding: 24px 20px !important;
+          }
+          .bento-content-pad-center {
+            padding: 24px 20px !important;
+          }
         }
       `}</style>
 
@@ -704,11 +771,7 @@ export default function BentoGrid() {
           <SectionHeading />
 
           {/* Bento grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 14,
-          }}>
+          <div className="bento-grid">
             <CardAI index={0} />
             <CardCounter index={1} />
             <CardClients index={2} />

@@ -6,7 +6,7 @@ import AnimatedLogo from './AnimatedLogo';
 
 type FooterLink = {
   label: string;
-  href: string;
+  href?: string;
   external?: boolean;
 };
 
@@ -34,23 +34,23 @@ const footerSections: FooterSection[] = [
     links: [
       {
         label: 'Software Engineering',
-        href: '/services/software-engineering',
+
       },
       {
         label: 'AI & Machine Learning',
-        href: '/services/ai-machine-learning',
+
       },
       {
         label: 'Mobile Applications',
-        href: '/services/mobile-applications',
+
       },
       {
         label: 'Web Applications',
-        href: '/services/web-applications',
+
       },
       {
         label: 'UI/UX Design',
-        href: '/services/ui-ux-design',
+
       },
     ],
   },
@@ -59,23 +59,19 @@ const footerSections: FooterSection[] = [
     links: [
       {
         label: 'About Us',
-        href: '/about',
+
       },
       {
         label: 'Our Work',
-        href: '/work',
-      },
-      {
-        label: 'Careers',
-        href: '/careers',
+
       },
       {
         label: 'Blog',
-        href: '/blog',
+
       },
       {
         label: 'Contact',
-        href: '/#contact',
+
       },
     ],
   },

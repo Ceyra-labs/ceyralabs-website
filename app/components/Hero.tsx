@@ -250,8 +250,9 @@ export default function Hero() {
             animation: 'fade-in-up 0.6s ease 0.8s both',
           }}>
             {[
-              { value: '30+', label: 'Global Clients' },
-              { value: '5+', label: 'Years Active' },
+              { value: '10+', label: 'Global Clients' },
+              { value: '3+', label: 'Years Active' },
+              { value: '100%', label: 'Client Satisfaction' },
             ].map(({ value, label }) => (
               <div key={label}>
                 <div style={{
