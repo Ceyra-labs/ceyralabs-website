@@ -133,11 +133,9 @@ const contactInfo: ContactInfo[] = [
 const legalLinks: FooterLink[] = [
   {
     label: 'Privacy Policy',
-    href: '/privacy-policy',
   },
   {
     label: 'Terms of Service',
-    href: '/terms-of-service',
   },
 ];
 
