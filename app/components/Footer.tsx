@@ -124,8 +124,8 @@ const contactInfo: ContactInfo[] = [
   },
   {
     label: 'Phone',
-    value: '+94 77 123 4567',
-    href: 'tel:+94771234567',
+    value: '+94 76 011 2707',
+    href: 'tel:+94760112707',
     iconSrc: '/icons/footer/phone-icon.svg',
   },
 ];

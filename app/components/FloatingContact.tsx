@@ -337,7 +337,7 @@ export default function FloatingContact() {
           <ActionButton
             visible={open}
             delay={0.08}
-            href="tel:+1234567890"
+            href="tel:+94760112707"
             ariaLabel="Call us"
             gradient="linear-gradient(135deg, #7C5CFC 0%, #22D3EE 100%)"
             glowColor="124,92,252"
@@ -351,7 +351,7 @@ export default function FloatingContact() {
           <ActionButton
             visible={open}
             delay={0}
-            href="https://wa.me/1234567890"
+            href="https://wa.me/94760112707"
             ariaLabel="Chat on WhatsApp"
             gradient="linear-gradient(135deg, #25D366 0%, #128C7E 100%)"
             glowColor="37,211,102"
